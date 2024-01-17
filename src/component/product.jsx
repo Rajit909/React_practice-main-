@@ -1,4 +1,5 @@
-// import React from 'react'
+import React from 'react'
+import Price from './Price'
 
 function Product({title, price=5999, features}){
 
@@ -8,8 +9,14 @@ function Product({title, price=5999, features}){
    
   return (
     <>
-    <div className="container">
+    <div className="card">
+      <div className="head">
+
     <h3>{title}</h3>
+      </div>
+    <div className="price">
+     <Price oldPrice={5999} newPrice={4999}/>
+    </div>
     </div>
     </>
 

@@ -5,12 +5,14 @@ const Producttab = () => {
 
   return (
     <>
-      <h3>Prioducts</h3>
-    <div className='main'>
-      <Product title="Product"/>
-      <Product title="Product"/>
-      <Product title="Product"/>
-      <Product title="Product"/>
+    <div className='container'>
+      <h4>Prioducts</h4>
+      <div className='main'>
+        <Product title="Product"/>
+        <Product title="Product"/>
+        <Product title="Product"/>
+        <Product title="Product"/>
+      </div>
     </div>
     </>
   )
