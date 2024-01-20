@@ -24,17 +24,18 @@ function Product({ title, desc, idx }) {
     "1599"
   ];
   let desciption = [
-    "Ele",
-    "Ele",
-    "Ele",
-    "Ele"
+    ["6 GB RAM", "128 GB ROM"],
+    ["6 GB RAM", "128 GB ROM"],
+    ["6 GB RAM", "64 GB ROM"],
+    ["4 GB RAM", "64 GB ROM"],
   ];
   return (
     <>
       <div className="card">
         <div className="head">
           <h4>{titleName[idx]}</h4>
-          <p>{desciption[idx]}</p>
+          <p>{desciption[idx][0]}</p>
+          <p>{desciption[idx][1]}</p>
         </div>
         <div className="price">
           <Price oldPrice={oldPrice[idx]} newPrice={newPrice[idx]} />

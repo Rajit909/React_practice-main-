@@ -6,7 +6,7 @@ const Producttab = () => {
   return (
     <>
     <div className='container'>
-      <h4>Prioducts</h4>
+      <h4>Blockbuster deals | shop now</h4>
       <div className='main'>
         <Product title="Product" idx={0}/>
         <Product title="Product" idx={1}/>
