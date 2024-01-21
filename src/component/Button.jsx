@@ -1,6 +1,7 @@
 import React from 'react'
 
-function handleClick(){
+function handleClick(event){
+    console.log(event)
     alert("hiiiiiiii");
 }
 
