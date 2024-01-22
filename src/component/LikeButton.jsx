@@ -21,7 +21,7 @@ function LikeButton() {
   return (
     <>
         <p style={styles}  onClick={toggelLike}>
-            <p>Likes = {likes}</p>
+            <p>Clikes = {likes}</p>
             {
                 isLiked ? <i className='fa-solid fa-heart' style={likeStyle}></i> : <i class="fa-solid fa-thumbs-down"></i>
             }
