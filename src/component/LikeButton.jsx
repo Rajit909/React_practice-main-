@@ -7,16 +7,25 @@ function LikeButton() {
     }
 
     const [isLiked, setIsLiked] = useState(false)
+    const [likes, setLikes] = useState(0)
 
     let toggelLike = ()=>{
-        // setIsLiked(isLiked+1)
-        console.log("logged");
+        setIsLiked(!isLiked)
+        setLikes(likes+1)
+    }
+
+    let likeStyle = {
+       color: "red"
     }
 
   return (
     <>
         <p style={styles}  onClick={toggelLike}>
-            <i className='fa-regular fa-heart'>Like{isLiked}</i>
+            <p>Likes = {likes}</p>
+            {
+                isLiked ? <i className='fa-solid fa-heart' style={likeStyle}></i> : <i class="fa-solid fa-thumbs-down"></i>
+            }
+            
         </p>
     
     </>
