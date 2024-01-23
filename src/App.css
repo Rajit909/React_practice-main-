@@ -1,3 +1,6 @@
+body{
+    background-color: gray;
+}
 .container{
     border: 2px solid black;
     border-radius: 10px;
@@ -30,8 +33,14 @@ span{
     text-align: center;
 }
 button{
-    padding:5px 30px;
+    padding:3px 30px;
     border-radius: 5px;
     color: white;
     font-weight: 600;
+}
+.main-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
