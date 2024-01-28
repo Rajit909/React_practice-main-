@@ -44,3 +44,16 @@ button{
     justify-content: center;
     align-items: center;
 }
+.main-list>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    border-radius: 5px;
+}
+#delbtn{
+    border-radius: 25px;
+    margin-left: 5px;
+}
