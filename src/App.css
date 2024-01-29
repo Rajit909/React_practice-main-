@@ -53,7 +53,8 @@ button{
 input{
     border-radius: 5px;
 }
-#delbtn{
+#taskbtn{
     border-radius: 25px;
     margin-left: 5px;
+    color: red;
 }

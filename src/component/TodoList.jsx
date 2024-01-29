@@ -19,9 +19,20 @@ function TodoList() {
   };
 
   let delTask = (id) => {
-    setTodos(todos.filter((todo) => todo.id != id))
+    setTodos(todos.filter((todo) => todo.id !== id))
 
   }
+
+  let upperCaseAll = () => {
+    setTodos((prevTodos) => (
+        prevTodos.map((todo) => {
+        return {
+            ...todo,
+            task: todo.task.toUpperCase()
+        }
+    })))
+    
+  } 
   return (
     <>
       <h4>Todo-list</h4>
@@ -56,12 +67,13 @@ function TodoList() {
             {todos.map((todo) => (
               <li key={todo.id}>
                 <span>{todo.task}</span>
-                <button id="delbtn"
+                <button id="taskbtn"
                 onClick={() => delTask(todo.id)}
                 >❌</button>
               </li>
               
-            ))}
+              ))}
+              <button id="taskbtn" onClick={upperCaseAll}>Update</button>
           </ul>
         </div>
       </div>
