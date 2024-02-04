@@ -47,7 +47,7 @@ function TodoList() {
   let lowerCaseOne = (id) => {
     setTodos((prevTodos) => 
       prevTodos.map((todo) => {
-       if(todo.id == id){
+       if(todo.id === id){
         return {
           ...todo,
           task: todo.task.toLowerCase()
