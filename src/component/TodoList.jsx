@@ -44,17 +44,17 @@ function TodoList() {
   //   );
   // };
 
-  let lowerCaseone = (id) => {
+  let lowerCaseOne = (id) => {
     setTodos((prevTodos) => 
       prevTodos.map((todo) => {
-        if(todo.id === id){
+       if(todo.id == id){
         return {
           ...todo,
           task: todo.task.toLowerCase()
         }
-        }else{
+       }else{
           return todo;
-        }
+       }
       })
     )
   }
@@ -95,13 +95,13 @@ function TodoList() {
                 <button id="taskbtn" onClick={() => delTask(todo.id)}>
                   ❌
                 </button>
-                <button id="taskbtn" onClick={lowerCaseone}>
+                <button id="taskbtn" onClick={() => lowerCaseOne(todo.id)}>
                   LC
                 </button>
               </li>
             ))}
             <button id="taskbtn" onClick={upperCaseAll}>
-              UpperCase
+              UC
             </button>
             {/* <button id="taskbtn" onClick={lowerCaseAll}>
               lowerCase
