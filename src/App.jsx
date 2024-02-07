@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
-import TodoList from './component/TodoList'
+import Lottery from './component/lottery game/Lottery'
+// import TodoList from './component/TodoList'
 // import LudoBoard from './component/LudoBoard'
 // import LikeButton from './component/LikeButton'
 // import Counter from './component/Counter'
@@ -19,7 +20,8 @@ function App() {
       {/* <Counter/> */}
       {/* <LikeButton/> */}
       {/* <LudoBoard/> */}
-      <TodoList/>
+      {/* <TodoList/> */}
+      <Lottery/>
     </>
   )
 }

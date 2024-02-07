@@ -1,0 +1,22 @@
+/* communoty classes */
+.center{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ticket-container{
+    border: 2px solid black;
+    padding: 3px 0px;
+    background-color: antiquewhite;
+    
+}
+.ticket-container>span{
+    padding:2px 10px;
+    border: 2px solid black;
+}
+button{
+    color: black;
+    margin-top: 5px;
+}
