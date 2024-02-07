@@ -3,13 +3,17 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 function TodoList() {
-  let [todos, setTodos] = useState([{ task: "sample task", id: uuidv4() }]);
+
+  let [todos, setTodos] = useState([
+    { task: "sample task", id: uuidv4(), isDone: false }
+  ]);
+
   let [newTodo, setNewTodo] = useState([""]);
 
   let addNewTodo = () => {
     console.log("new");
     setTodos((prevTodos) => {
-      return [...prevTodos, { task: newTodo, id: uuidv4() }];
+      return [...prevTodos, { task: newTodo, id: uuidv4(), isDone: false }];
     });
     setNewTodo("");
   };
@@ -58,6 +62,42 @@ function TodoList() {
       })
     )
   }
+  let markDone = (id) => {
+    setTodos((prevTodos) => 
+      prevTodos.map((todo) => {
+       if(todo.id === id){
+        return {
+          ...todo,
+          isDone: true
+        }
+       }else{
+          return todo;
+       }
+      })
+    )
+  }
+  let markAllDone = () => {
+    setTodos((prevTodos) => 
+      prevTodos.map((todo) => {
+       return {
+        ...todo,
+        isDone: true
+       }
+      })
+    )
+  }
+  let markAllNotDone = () => {
+    setTodos((prevTodos) => 
+      prevTodos.map((todo) => {
+       return {
+        ...todo,
+        isDone: false
+       }
+      })
+    )
+  }
+
+  
 
   return (
     <>
@@ -69,7 +109,6 @@ function TodoList() {
             value={newTodo}
             onChange={updateTodoValue}
           />
-
           <button
             style={{
               backgroundColor: "gray",
@@ -91,18 +130,27 @@ function TodoList() {
           <ul>
             {todos.map((todo) => (
               <li key={todo.id}>
-                <span>{todo.task}</span>
+                <span style={todo.isDone ? {textDecorationLine: "line-through"}: {}}> {todo.task}</span>
                 <button id="taskbtn" onClick={() => delTask(todo.id)}>
                   ❌
                 </button>
                 <button id="taskbtn" onClick={() => lowerCaseOne(todo.id)}>
                   LC
                 </button>
+                <button id="taskbtn" onClick={() => markDone(todo.id)}>
+                  ✅
+                </button>
               </li>
             ))}
             <button id="taskbtn" onClick={upperCaseAll}>
               UC
             </button>
+            <button id="taskbtn" onClick={markAllDone}>
+                Mark All ✅
+                </button>
+            <button id="taskbtn" onClick={markAllNotDone}>
+                All ! ✅
+                </button>
             {/* <button id="taskbtn" onClick={lowerCaseAll}>
               lowerCase
             </button> */}
