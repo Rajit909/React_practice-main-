@@ -1,6 +1,6 @@
-body{
-    background-color: rgb(48, 45, 45);
-}
+/* body{
+    background-color: rgb(250, 220, 220);
+} */
 /* community classes */
 .center{
     text-align: center;
@@ -74,3 +74,31 @@ input{
     align-items: center;
 }
 
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFBF00;
+    background-image: linear-gradient(rgb(109, 44, 169), rgb(88, 177, 107), rgb(187, 54, 216));
+}
+
+.CommentForm{
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    padding: 20px;
+    height: 250px;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom right, rgb(15, 14, 14), rgb(124, 123, 123));
+}
+input{
+    background-color: rgb(201, 195, 195);
+}
+textarea{
+    background-color: gray;
+}
+h3{
+    text-decoration: underline;
+}

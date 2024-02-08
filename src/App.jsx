@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import CommentsForm from './component/CommentsForm'
 // import Lottery from './component/lottery game/Lottery'
 // import TodoList from './component/TodoList'
 // import LudoBoard from './component/LudoBoard'
@@ -7,7 +8,7 @@ import './App.css'
 // import Counter from './component/Counter'
 // import Producttab from './component/producttab'
 // import Button from './component/Button'
-import Form from './component/Form'
+// import Form from './component/Form'
 
 
 
@@ -25,7 +26,8 @@ function App() {
       {/* <LudoBoard/> */}
       {/* <TodoList/> */}
       {/* <Lottery n={3} winCondition={winCondition}/> */}.
-      <Form/>
+      {/* <Form/> */}
+      <CommentsForm/>
     </>
   )
 }
