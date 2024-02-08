@@ -21,7 +21,7 @@ function App() {
       {/* <LikeButton/> */}
       {/* <LudoBoard/> */}
       {/* <TodoList/> */}
-      <Lottery/>
+      <Lottery n={3} winningSum={15}/>
     </>
   )
 }
