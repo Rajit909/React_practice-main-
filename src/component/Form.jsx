@@ -1,29 +1,33 @@
-import React from 'react'
+import React, { useState } from "react";
+import "../App.css";
 
-function handleFormSubmit(event){
-    event.preventDefault();
-    console.log("form submitted succesfully");
+function handleFormSubmit(event) {
+  event.preventDefault();
+  console.log("form submitted succesfully");
 }
 
 function Form() {
+  let [fullName, setFullName] = useState("");
+
+  let handleNameChange = (event) =>{
+    setFullName(event.target.value)
+  }
   return (
     <>
+      <div className="form">
         <form action="" onSubmit={handleFormSubmit}>
-            <label htmlFor="name">Name:</label>
-            <input type='text' name="name" id="name" placeholder='Enter name'/>
-            <br />
-            <br />
-            <label htmlFor="name">Email:</label>
-            <input type="email" name="email" id="email" placeholder='Enter email'/>
-            <br /><br />
-            <label htmlFor="name">Password:</label>
-            <input type="password" name="pass" id="pass" placeholder='Enter password'/>
-            <br />
-            <br />
-            <button >Submit</button>
+          <input
+            type="text"
+            placeholder="Enter your full name"
+            value={fullName}
+            onChange={handleNameChange}
+          />
+
+          <button>Submit</button>
         </form>
+      </div>
     </>
-  )
+  );
 }
 
-export default Form
+export default Form;
