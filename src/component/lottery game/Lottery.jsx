@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 import "./Lottery.css"
 import Ticket from "./Ticket"
-import { genTicket, sum } from './helper'
+import { genTicket } from './helper'
 
 
 
-function Lottery({n, winningSum}) {
+function Lottery({n, winCondition}) {
     let [ticket, setTicket] = useState(genTicket(n));
-    let isWinning = sum(ticket) === winningSum
+    let isWinning = winCondition(ticket)
     
     let buyTicket = () => {
       setTicket(genTicket(n))
     }
-    
+
   return (
     <>
     <div className='main-continer'>

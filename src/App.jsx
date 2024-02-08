@@ -12,6 +12,9 @@ import Lottery from './component/lottery game/Lottery'
 
 
 function App() {
+  let winCondition = (ticket) =>{
+    return ticket.every((num) => num === ticket[0])
+  }
   return (
     <>
       {/* <Form/> */}
@@ -21,7 +24,7 @@ function App() {
       {/* <LikeButton/> */}
       {/* <LudoBoard/> */}
       {/* <TodoList/> */}
-      <Lottery n={3} winningSum={15}/>
+      <Lottery n={3} winCondition={winCondition}/>
     </>
   )
 }
