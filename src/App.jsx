@@ -18,15 +18,15 @@ function App() {
   // }
   return (
     <>
-      {/* <Form/> */}
-      {/* <Producttab/> */}
-      {/* <Button/> */}
-      {/* <Counter/> */}
-      {/* <LikeButton/> */}
-      {/* <LudoBoard/> */}
-      {/* <TodoList/> */}
-      {/* <Lottery n={3} winCondition={winCondition}/> */}.
-      {/* <Form/> */}
+       <Form/> 
+       <Producttab/> 
+      <Button/>
+      <Counter/>
+     <LikeButton/>
+     <LudoBoard/>
+      <TodoList/>
+       <Lottery n={3} winCondition={winCondition}/> 
+      <Form/> 
       <CommentsForm/>
     </>
   )
